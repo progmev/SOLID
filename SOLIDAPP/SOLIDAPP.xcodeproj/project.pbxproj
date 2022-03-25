@@ -22,6 +22,8 @@
 		2DB0E59827EE15DA00A2A55E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59727EE15DA00A2A55E /* AppGroup.swift */; };
 		2DB0E59B27EE16D400A2A55E /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */; };
 		2DB0E59D27EE16FD00A2A55E /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */; };
+		2DB0E5A227EE1C7E00A2A55E /* LocalDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E5A127EE1C7E00A2A55E /* LocalDataFetcher.swift */; };
+		2DB0E5A427EE1F9E00A2A55E /* usersAPI.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DB0E5A327EE1F9E00A2A55E /* usersAPI.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		2DB0E59727EE15DA00A2A55E /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		2DB0E5A127EE1C7E00A2A55E /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
+		2DB0E5A327EE1F9E00A2A55E /* usersAPI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usersAPI.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			children = (
 				2DB0E58B27EE141C00A2A55E /* Country.swift */,
 				2DB0E59727EE15DA00A2A55E /* AppGroup.swift */,
+				2DB0E5A327EE1F9E00A2A55E /* usersAPI.txt */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,10 +149,19 @@
 			isa = PBXGroup;
 			children = (
 				2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */,
-				2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */,
+				2DB0E5A027EE1C5F00A2A55E /* DataFetcher */,
 				2DB0E58E27EE147600A2A55E /* NetworkService.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		2DB0E5A027EE1C5F00A2A55E /* DataFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */,
+				2DB0E5A127EE1C7E00A2A55E /* LocalDataFetcher.swift */,
+			);
+			path = DataFetcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			files = (
 				2DB0E57E27EE0F2800A2A55E /* LaunchScreen.storyboard in Resources */,
 				2DB0E57B27EE0F2800A2A55E /* Assets.xcassets in Resources */,
+				2DB0E5A427EE1F9E00A2A55E /* usersAPI.txt in Resources */,
 				2DB0E57927EE0F2700A2A55E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB0E59D27EE16FD00A2A55E /* NetworkDataFetcher.swift in Sources */,
+				2DB0E5A227EE1C7E00A2A55E /* LocalDataFetcher.swift in Sources */,
 				2DB0E59127EE149800A2A55E /* DataStoreSingletone.swift in Sources */,
 				2DB0E57627EE0F2700A2A55E /* ViewController.swift in Sources */,
 				2DB0E59627EE155600A2A55E /* ValidateService.swift in Sources */,

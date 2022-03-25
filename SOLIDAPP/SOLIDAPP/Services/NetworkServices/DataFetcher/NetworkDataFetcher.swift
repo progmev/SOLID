@@ -15,7 +15,11 @@ protocol DataFetcher {
 
 // MARK: - NetworkDataFetcher
 
-final class NetworkDataFetcher: DataFetcher {
+/*
+ Этот класс с использовнием Networking вытаскивает данные из сети и пытается их распарсить
+ */
+
+class NetworkDataFetcher: DataFetcher {
     
     var networking: Networking
     
