@@ -19,6 +19,11 @@ protocol DataFetcher {
  Этот класс с использовнием Networking вытаскивает данные из сети и пытается их распарсить
  */
 
+/*
+ NetworkDataFetcher - Модуль нижнего уровня для DataFetcherService
+ NetworkDataFetcher - Модуль высшего  уровня для NetworkService
+ */
+
 class NetworkDataFetcher: DataFetcher {
     
     var networking: Networking

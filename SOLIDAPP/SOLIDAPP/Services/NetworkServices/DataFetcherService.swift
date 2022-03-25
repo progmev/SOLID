@@ -14,10 +14,19 @@ protocol DataFetcherServiceProtocol {
     func fetchLocalCountry(completion: @escaping ([Country]?) -> Void)
 }
 
+/*
+ Модуль высшего уровня
+ Модуль верхнего уровня не должен зависеть от модулей нижнего уровня. Все зависят от абстракций.
+ */
+
 final class DataFetcherService: DataFetcherServiceProtocol {
     
     /*
      переименовали в networkDataFetcher и добавили localDataFetcher
+     */
+    
+    /*
+     Наши абстракции
      */
     
     var networkDataFetcher: DataFetcher

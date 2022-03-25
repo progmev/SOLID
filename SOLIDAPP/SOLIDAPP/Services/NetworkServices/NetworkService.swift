@@ -13,6 +13,10 @@ protocol Networking {
     func request(urlString: String, completion: @escaping (Data?, Error?) -> Void)
 }
 
+/*
+ Модуль нижнего уровня для NetworkDataFetcher
+ */
+
 final class NetworkService: Networking {
 
     // MARK: Internal
