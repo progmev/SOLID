@@ -25,15 +25,27 @@ class ViewController: BaseViewController {
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
         dataFetcherService.fetchCountry { countries in
-            print(countries?.first?.Name)
+            print("\n- - - fetchCountry: ")
+            print(countries?.first?.Name ?? "", "\n")
         }
 
         dataFetcherService.fetchFreeGames { freeGames in
-            print(freeGames?.feed.results.first?.name)
+            print("\n- - - freeGames first: ")
+            print(freeGames?.feed.results.first?.name ?? "", "\n")
         }
 
-        dataFetcherService.fetchNewGames { newGames in
-            print(newGames?.feed.results.first?.name)
+        dataFetcherService.fetchPaidGames { paidGames in
+            print("\n- - - PaidGames first: ")
+            print(paidGames?.feed.results.first?.name ?? "", "\n")
+        }
+        
+        /*
+         Added fetchLocalCountry
+         */
+        
+        dataFetcherService.fetchLocalCountry { (localCountries) in
+            print("\n- - - fetchLocalCountry last: ")
+            print(localCountries?.last?.Name ?? "", "\n")
         }
     }
     
