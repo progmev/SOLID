@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class DataStore {
+final class DataStoreSingletone {
 
-    static let shared = DataStore()
+    static let shared = DataStoreSingletone()
     private init() { }
 
     public func saveName(name: String) {

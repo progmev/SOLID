@@ -16,9 +16,12 @@
 		2DB0E58A27EE13F600A2A55E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E58927EE13F600A2A55E /* BaseViewController.swift */; };
 		2DB0E58C27EE141C00A2A55E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E58B27EE141C00A2A55E /* Country.swift */; };
 		2DB0E58F27EE147600A2A55E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E58E27EE147600A2A55E /* NetworkService.swift */; };
-		2DB0E59127EE149800A2A55E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59027EE149800A2A55E /* DataStore.swift */; };
+		2DB0E59127EE149800A2A55E /* DataStoreSingletone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59027EE149800A2A55E /* DataStoreSingletone.swift */; };
 		2DB0E59427EE14CB00A2A55E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59327EE14CB00A2A55E /* Constants.swift */; };
 		2DB0E59627EE155600A2A55E /* ValidateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59527EE155600A2A55E /* ValidateService.swift */; };
+		2DB0E59827EE15DA00A2A55E /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59727EE15DA00A2A55E /* AppGroup.swift */; };
+		2DB0E59B27EE16D400A2A55E /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */; };
+		2DB0E59D27EE16FD00A2A55E /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +36,12 @@
 		2DB0E58927EE13F600A2A55E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2DB0E58B27EE141C00A2A55E /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		2DB0E58E27EE147600A2A55E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		2DB0E59027EE149800A2A55E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		2DB0E59027EE149800A2A55E /* DataStoreSingletone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreSingletone.swift; sourceTree = "<group>"; };
 		2DB0E59327EE14CB00A2A55E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2DB0E59527EE155600A2A55E /* ValidateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateService.swift; sourceTree = "<group>"; };
+		2DB0E59727EE15DA00A2A55E /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB0E58B27EE141C00A2A55E /* Country.swift */,
+				2DB0E59727EE15DA00A2A55E /* AppGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,8 +125,8 @@
 		2DB0E58D27EE145500A2A55E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2DB0E58E27EE147600A2A55E /* NetworkService.swift */,
-				2DB0E59027EE149800A2A55E /* DataStore.swift */,
+				2DB0E59927EE16B600A2A55E /* NetworkServices */,
+				2DB0E59027EE149800A2A55E /* DataStoreSingletone.swift */,
 				2DB0E59527EE155600A2A55E /* ValidateService.swift */,
 			);
 			path = Services;
@@ -131,6 +138,16 @@
 				2DB0E59327EE14CB00A2A55E /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		2DB0E59927EE16B600A2A55E /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				2DB0E59A27EE16D400A2A55E /* DataFetcherService.swift */,
+				2DB0E59C27EE16FD00A2A55E /* NetworkDataFetcher.swift */,
+				2DB0E58E27EE147600A2A55E /* NetworkService.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,11 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB0E59127EE149800A2A55E /* DataStore.swift in Sources */,
+				2DB0E59D27EE16FD00A2A55E /* NetworkDataFetcher.swift in Sources */,
+				2DB0E59127EE149800A2A55E /* DataStoreSingletone.swift in Sources */,
 				2DB0E57627EE0F2700A2A55E /* ViewController.swift in Sources */,
 				2DB0E59627EE155600A2A55E /* ValidateService.swift in Sources */,
 				2DB0E58A27EE13F600A2A55E /* BaseViewController.swift in Sources */,
 				2DB0E57227EE0F2700A2A55E /* AppDelegate.swift in Sources */,
+				2DB0E59B27EE16D400A2A55E /* DataFetcherService.swift in Sources */,
+				2DB0E59827EE15DA00A2A55E /* AppGroup.swift in Sources */,
 				2DB0E58C27EE141C00A2A55E /* Country.swift in Sources */,
 				2DB0E58F27EE147600A2A55E /* NetworkService.swift in Sources */,
 				2DB0E57427EE0F2700A2A55E /* SceneDelegate.swift in Sources */,

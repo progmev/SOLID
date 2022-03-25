@@ -11,8 +11,8 @@ class ViewController: BaseViewController {
     
     // MARK: Properties
 
-    let networkService = NetworkService.shared
-    let dataStore = DataStore.shared
+    let dataFetcherService: DataFetcherServiceProtocol = DataFetcherService()
+    let dataStore = DataStoreSingletone.shared
     
     // MARK: - IBOutlets
     
@@ -23,8 +23,17 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
-        networkService.dataFetcher(urlString: Constans.urlString) { data, error in
-            print(data)
+        
+        dataFetcherService.fetchCountry { countries in
+            print(countries?.first?.Name)
+        }
+
+        dataFetcherService.fetchFreeGames { freeGames in
+            print(freeGames?.feed.results.first?.name)
+        }
+
+        dataFetcherService.fetchNewGames { newGames in
+            print(newGames?.feed.results.first?.name)
         }
     }
     
